@@ -446,4 +446,10 @@ td {
     padding-right: 8px;
     padding-left: 8px;
   }
+
+  .id1 {
+    left: 0px;
+    top: 155px;
+    right: 150px;
+  }
 }

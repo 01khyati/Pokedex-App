@@ -18,7 +18,7 @@ export default function CardDetails(props) {
               {<FaArrowLeft />}
             </i>
             <div className="card1">
-              <span className="id">#{onePokeData.id}</span>
+              <span className="id id1">#{onePokeData.id}</span>
               <div className="card-title1">
                 <h2 className="name">{onePokeData.name}</h2>
                 <div>
