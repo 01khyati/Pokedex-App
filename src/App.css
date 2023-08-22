@@ -426,8 +426,9 @@ td {
   }
 
   .poke-detail-img img {
-    right: 65px;
+    /* right: 65px; */
     width: 117px;
+    right: 20px;
     /* bottom: 350px; */
   }
 
