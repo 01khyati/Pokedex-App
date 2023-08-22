@@ -1,0 +1,406 @@
+.App {
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+.App::before {
+  content: "";
+  background-image: url("./Images/bg-img.jpg");
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.main-container::before {
+  content: "";
+  background-image: url("./Images/bg-img.jpg");
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.heading {
+  position: relative;
+  margin: 0px auto 5rem;
+  padding: 50px 0 0px 0;
+  color: #444;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.heading i {
+  position: relative;
+  display: inline-block;
+  background-image: url("./Images/pokeball.svg");
+  height: 0.6em;
+  width: 0.6em;
+  background-repeat: no-repeat;
+}
+
+.heading::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 4px;
+  background-color: #fb6c6c;
+  left: 50%;
+  margin-top: 10px;
+  margin-left: -1em;
+}
+
+.nav-gen {
+  margin-bottom: 4rem;
+}
+
+.select-gen {
+  position: relative;
+  color: #6c79db;
+  font-size: 1.8em;
+  font-weight: 750;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.gen-table {
+  position: relative;
+  display: table;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  font-size: 1.3rem;
+  padding: 0.8rem 1.3rem;
+  font-weight: 799;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #eee;
+}
+
+button {
+  padding: 20px;
+  margin: 20px;
+}
+
+.card-main-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 0 30px;
+}
+
+.card {
+  background-color: var(--color);
+  text-transform: capitalize;
+  color: #fff;
+  box-shadow: 0 0 20px 0 var(--color);
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 3rem 1rem 2rem 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* transition: all 0.3s; */
+  transition: transform 0.4s ease-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: 0 0 30px 0 var(--color);
+}
+
+.cardflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0 0 20px 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.cardflex img {
+  height: 155px;
+  position: relative;
+  align-self: flex-end;
+  filter: drop-shadow(10px 10px 30px white);
+  /* box-shadow: 10px 10px 100px white; */
+}
+
+.card-title {
+  align-self: flex-start;
+}
+
+.poke-types {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  margin-bottom: 5px;
+  border-radius: 25px;
+  width: fit-content;
+  padding: 5px 15px;
+}
+
+.id {
+  position: absolute;
+  right: 40px;
+  top: 25px;
+  font-size: 2.5rem;
+  color: hsla(0, 0%, 100%, 0.2);
+}
+
+#grass {
+  --color: #48d0b0;
+}
+
+#fire {
+  --color: #fb6c6c;
+}
+
+#water {
+  --color: #609fb5;
+}
+
+#bug {
+  --color: #c3ce75;
+}
+
+#normal {
+  --color: #bab0d5;
+}
+
+#flying {
+  --color: #c2c2a1;
+}
+
+#poison {
+  --color: #7c538c;
+}
+
+#electric {
+  --color: #ffd86f;
+}
+
+#ground {
+  --color: #b1736c;
+}
+
+#fairy {
+  --color: #f469a9;
+}
+
+#rock {
+  --color: #a6aab6;
+}
+
+#fighting {
+  --color: #d6b591;
+}
+
+#ice {
+  --color: #7fccec;
+}
+
+#dragon {
+  --color: #f9be00;
+}
+
+#psychic {
+  --color: #9b7fa6;
+}
+
+#ghost {
+  --color: #735797;
+}
+
+#dark {
+  --color: #333;
+}
+
+#steel {
+  --color: #ccccde;
+}
+
+@media screen {
+  .card-main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .card-main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card-main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.details-main-container {
+  max-height: 100vh;
+  max-width: 800px;
+  width: 95vw;
+  top: 320px;
+  bottom: 0;
+  left: 23vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 99999;
+  background-color: #fff;
+  border-radius: 3rem;
+  animation: pull-up-center 0.3s ease-out both;
+}
+
+.card-title1 {
+  justify-content: center;
+}
+
+.poke-detail-img img {
+  height: 120px;
+  /* padding: 25px 0px 0px 0px; */
+  position: absolute;
+  bottom: 85%;
+  right: 41%;
+  filter: drop-shadow(10px 10px 30px white);
+  animation: fade-in 0.3s ease-out 0.5s both;
+}
+
+.left-arrow {
+  float: left;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.card-container-1 {
+  background-color: var(--color);
+  padding: 30px 30px 0px 30px;
+  border-radius: 3rem 3rem 0rem 0rem;
+  transform: translateY(40px);
+  height: 230px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  text-transform: capitalize;
+}
+
+.card1 {
+  margin-bottom: 21%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poke-types1 {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: hsla(0, 0%, 100%, 0.2);
+  margin-bottom: 50px;
+  border-radius: 25px;
+  width: fit-content;
+  padding: 6px 17px;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.card-container-2 {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 3rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+
+  /* animation: pull-up 0.3s ease-out 0.2s both; */
+}
+
+.navbar {
+  text-align: left;
+}
+
+.navbar ul {
+  padding: 0px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.nav-link1 {
+  font-size: medium;
+  color: rgb(196, 190, 190);
+}
+
+.nav-link1:hover {
+  color: black;
+  background-color: white;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid rgb(231, 228, 228);
+  margin-top: 0px;
+}
+
+table {
+  text-align: start;
+}
+
+td {
+  padding: 12px 30px 12px 15px;
+}
+
+.td2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.species-data {
+  margin-right: 5px;
+}
+
+.nav-link1.active {
+  color: black;
+  position: relative;
+}
+
+.nav-link1.active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #6c79db;
+}
