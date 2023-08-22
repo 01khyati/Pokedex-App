@@ -67,7 +67,7 @@ export default function CardDetails(props) {
                 >
                   Base Status
                 </li>
-                <li
+                {/* <li
                   className={`nav-link nav-link1 ${
                     active == "evolution" && "active"
                   }`}
@@ -77,13 +77,13 @@ export default function CardDetails(props) {
                   }}
                 >
                   Evolution
-                </li>
+                </li> */}
               </ul>
             </nav>
             <hr />
             {tab == "about" && <About onePokeData={onePokeData} />}
             {tab == "base" && <BaseStatus onePokeData={onePokeData} />}
-            {tab == "evolution" && <Evolution onePokeData={onePokeData} />}
+            {/* {tab == "evolution" && <Evolution onePokeData={onePokeData} />} */}
           </div>
         </div>
       </div>
